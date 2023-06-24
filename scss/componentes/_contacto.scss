@@ -1,0 +1,47 @@
+.mapa{
+    aspect-ratio: 9/16;
+    margin-top: 4vw;
+}
+
+.icon-contacto{
+    color:$color-primario;
+    font-size: clamp(3rem,5vw,4rem);
+}
+
+.redes-contacto{
+    color:$color-primario;
+    font-size: clamp(2rem,5vw,3rem);
+    margin-inline: 1vw;
+}
+
+#main-contacto{
+    h5{
+        color:$color-primario;
+        font-size: 1.5rem;
+    }
+    small a{
+        font-size: 1rem;
+        color:$color-texto;
+        font-family:$font-texto;
+    }
+
+    input,textarea{
+        border-color:$color-primario;
+    }
+
+    label{
+        color:$color-texto;
+    }
+} 
+
+form h3{
+    color:$color-primario;
+    font-weight: 500;
+}
+
+.boton-form{
+    background-color:$color-primario;
+    @include bordeRedondeado(none, 5px);
+    width: 100%;
+
+}

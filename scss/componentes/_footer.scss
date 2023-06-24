@@ -1,0 +1,22 @@
+footer{
+    background-color: $color-secundario;
+    margin-bottom: 60px;
+    i{
+        color: $color-primario;
+    }
+
+    h3{
+        font-family: $font-title;
+        font-weight: 500;
+    }
+
+    a{
+        text-decoration: none;
+        font-family: $font-texto;
+        color: $color-texto;
+    }
+}
+
+.redes i{
+    padding-right: 2vw;
+}

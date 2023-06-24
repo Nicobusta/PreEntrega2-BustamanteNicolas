@@ -1,0 +1,4 @@
+@mixin bordeRedondeado($tipo, $redondeo){
+    border: $tipo;
+    border-radius: $redondeo;
+};

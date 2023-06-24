@@ -1,358 +1,321 @@
-:root{
-    --color-primario:#d5b54a;
-    --color-primario-alfa:#d5b44ace;
-    --color-secundario:#e7e7e5;
-    --color-terciario:#d0baa5;
-    --color-font:#fff;
-    --color-texto:#000;
-    --sombra-texto:1px 1px 1px#000, 2px 2px 4px#000;
-    --font-texto:'Courgette';
-    --font-title:'Playfair Display', serif;
-}
-  
-body {
-    font-family: var(--font-title);
+/* --color-primario-alfa:#d5b44ace; */
+.navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28213, 181, 74%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-p{
-    font-family: var(--font-texto);
+.dorada__nav__a {
+  color: #d5b54a;
+  font-weight: 500;
 }
 
-.navbar-toggler-icon{
-    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28213, 181, 74%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.dorada__bg__nav {
+  background-color: #e7e7e5;
 }
 
-.dorada__nav__a{
-    color: var(--color-primario);
-    font-weight: 500;
-} 
-
-.dorada__bg__nav{
-    background-color: var(--color-secundario);
+.dorada__nav__link {
+  font-size: 1.5vw;
+  color: #d5b54a;
+  font-weight: 500;
 }
 
-.dorada__nav__link{
-    font-size: 1.5vw;
-    color: var(--color-primario);
-    font-weight: 500;
+footer {
+  background-color: #e7e7e5;
+  margin-bottom: 60px;
+}
+footer i {
+  color: #d5b54a;
+}
+footer h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+footer a {
+  text-decoration: none;
+  font-family: "Courgette";
+  color: #000;
 }
 
-footer{
-    background-color: var(--color-secundario);
-    margin-bottom: 60px;
+.redes i {
+  padding-right: 2vw;
 }
 
-footer i{
-    color: var(--color-primario);
+header .titulo {
+  position: absolute;
+  top: 10px;
+  color: #d5b54a;
+  text-align: center;
+}
+header .titulo h1 {
+  margin-bottom: 0;
+  margin-top: 7rem;
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
+  font-size: clamp(1.2rem, 4vw, 3.5rem);
+}
+header .titulo h4 {
+  margin-top: 1vh;
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
+  font-size: clamp(0.7rem, 2.5vw, 2rem);
 }
 
-.dorada__footer__contacto{
-    padding-right: .5vw;
-    margin-left: 3vw;   
+.img-principal {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 30%;
 }
 
-footer h3{
-    font-family: var(--font-title);
-    font-weight: 500;
-}
-footer a{
-    text-decoration: none;
-    font-family: var(--font-texto);
-    color: var(--color-texto);
+.intro {
+  background-color: rgba(213, 181, 74, 0.7);
+  height: 90vh;
 }
 
-.redes i{
-    padding-right: 2vw;
+.intro-parrafo {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-family: "Courgette";
+  line-height: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: center;
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
 }
 
-/* *********** index **************** */
-
-header .titulo{
-    position: absolute;
-    top:10px;
-    color: var(--color-primario);
-    text-align: center;
+#main-index .card-index {
+  text-decoration: none;
+  color: #000;
 }
-
-header .titulo h1{
-    margin-bottom: 0;
-    margin-top: 7rem;
-    text-shadow: var(--sombra-texto);
-    font-size:clamp(1.2rem, 4vw, 3.5rem);
-}
-
-header .titulo h4{
-    margin-top: 1vh;
-    text-shadow: var(--sombra-texto);
-    font-size:clamp(0.7rem, 2.5vw, 2rem);
-}
-
-.img-principal{
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center 30%;
-}
-.intro{
-    background-color: var(--color-primario-alfa);
-    height: 90vh;
-}
-.intro-parrafo{
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-family: var(--font-texto);
-    line-height: clamp(1.5rem, 3vw, 2.5rem);
-    text-align: center;
-    text-shadow: var(--sombra-texto);
-}
-
-#main-index .card-index{
-    text-decoration: none;
-    color: var(--color-texto);
-}
-
-.section-card{
-    align-items: center;
-    margin: 2vw 0;
-    border:solid thin var(--color-primario);
-    border-radius: 10px;
-}
-.ver-mas {
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    background-color: var(--color-primario-alfa);
-    color: var(--white-color);
-    opacity: 0;
-    border-radius: 10px;
-    text-shadow: var(--sombra-texto);
-}
-
-.card-index:hover .ver-mas {
+#main-index .card-index:hover .ver-mas {
   opacity: 1;
 }
 
+.ver-mas {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(213, 181, 74, 0.7);
+  color: #fff;
+  opacity: 0;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
+}
 .ver-mas > div {
   padding: 1rem;
-  border: thin solid var(--color-font);
+  border: thin solid #fff;
   border-radius: 10px;
   width: 100%;
   height: 100%;
 }
 
-.dorada__img__card{
-    padding: 0 4vw;
-    text-align: center;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+.dorada__img__card {
+  padding: 0 4vw;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.section-card img{
-    margin:2vw 0;
-    width: clamp(300px, 27vw, 400px);
-    aspect-ratio: 4/3; 
-    border-radius: 5px;  
-    object-fit: cover;
+.container-galery {
+  width: 100%;
 }
 
-.section-card article h3{
-    margin-top: 2vw;
-    text-align: center;
-    color:var(--color-primario);
+.galery-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/*************** galeria que hacer *******************/
-.container-galery{
-    width: 100%;
+.galery-item {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex: 1;
+  background-color: #000;
+  margin: 0;
+  opacity: 1;
+  overflow: hidden;
 }
-.galery-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    
- }
- .galery-item{
-     position: relative;
-     isolation: isolate;
-     display: flex;
-     flex: 1;
-     background-color: #000;
-     margin: 0;
-     opacity: 1;
-     overflow: hidden;
- }
- 
- .galery-item:hover{
-     opacity: 1;
-     flex-grow:5;
-     flex-basis: 100%;
- }
- 
- .galery-item:not(:hover){
-     opacity: 0.75;
- }
- 
- .item-image{
-     position: absolute;
-     top: 0;
-     right: 0;
-     z-index: -1;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
- 
- .item-description{
-     align-self: flex-end;
-     text-transform: uppercase;
-     color: var(--color-font);
-     font-family: var(--font-title);
-     width: 50%;
-     text-align: center;
- }
- 
- .name{
-     font-size: 37px;
-     background: var(--color-primario);
-     padding:10px;
-     opacity:0;
-     border-radius: 0 40px 40px 0;
- }
-  .galery-item:hover .name{
-     opacity: 1;
-  }
-
- /* ********** gastronomia ************* */
-.text{
-    background: var(--color-primario-alfa);
-    position: relative; 
+.galery-item:hover {
+  opacity: 1;
+  flex-grow: 5;
+  flex-basis: 100%;
+}
+.galery-item:hover .name {
+  opacity: 1;
+}
+.galery-item:not(:hover) {
+  opacity: 0.75;
 }
 
-.imagen{
-    height: 45vw;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    opacity: 0.8;
-}
- 
-.padding-section{
-    padding: 200px 0;    
-}
-.titulo-parrafo{
-    position: relative;
-    z-index: 1;
-    margin:20px 15%;
-    text-align: center;
-    text-shadow: var(--sombra-texto);
+.item-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.item__gastronomia{
-    text-shadow: var(--sombra-texto);
-    font-family: var(--font-texto);
-    list-style-type: square;
-}
-/* ******** nosotros *************** */
-.img-nosotros img{
-    width: 100%;
-}
-
-#main-nosotros section img{
-    aspect-ratio: 3/4;
-    object-fit: cover;
-} 
-
-/* ******** contacto *************** */
-.mapa{
-    aspect-ratio: 9/16;
-    margin-top: 4vw;
+.item-description {
+  align-self: flex-end;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  width: 50%;
+  text-align: center;
 }
 
-.icon-contacto{
-    color: var(--color-primario);
-    font-size: clamp(3rem,5vw,4rem);
+.name {
+  font-size: 37px;
+  background: #d5b54a;
+  padding: 10px;
+  opacity: 0;
+  border-radius: 0 40px 40px 0;
 }
 
-.redes-contacto{
-    color: var(--color-primario);
-    font-size: clamp(2rem,5vw,3rem);
-    margin-inline: 1vw;
+.mapa {
+  aspect-ratio: 9/16;
+  margin-top: 4vw;
 }
 
-#main-contacto h5{
-    color: var(--color-primario);
-    font-size: 1.5rem;
+.icon-contacto {
+  color: #d5b54a;
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 
-#main-contacto small a{
-    font-size: 1rem;
-    color: var(--color-texto);
-    font-family: var(--font-texto);
+.redes-contacto {
+  color: #d5b54a;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-inline: 1vw;
 }
 
-form h3{
-    color: var(--color-primario);
-    font-weight: 500;
+#main-contacto h5 {
+  color: #d5b54a;
+  font-size: 1.5rem;
+}
+#main-contacto small a {
+  font-size: 1rem;
+  color: #000;
+  font-family: "Courgette";
+}
+#main-contacto input, #main-contacto textarea {
+  border-color: #d5b54a;
+}
+#main-contacto label {
+  color: #000;
 }
 
-#main-contacto input, #main-contacto textarea{
-    border-color: var(--color-primario);
+form h3 {
+  color: #d5b54a;
+  font-weight: 500;
 }
 
-#main-contacto label{
-    color: var(--color-texto);
+.boton-form {
+  background-color: #d5b54a;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
 }
 
-.boton-form{
-    background-color: var(--color-primario);
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-
-}
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    
-}
-
 /* / Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .galery-wrapper{
-        flex-direction: row;
-        height: 90vh;
-    }
-    .galery-item:hover{
-        flex-basis: 0;
-    }
- }
-
+  .galery-wrapper {
+    flex-direction: row;
+    height: 90vh;
+  }
+  .galery-item:hover {
+    flex-basis: 0;
+  }
+}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    #main-index section article h3{
-        margin-top:0;
-    }
-    nav{
-        position: fixed !important;
-        height: 64px;
-        top:0;
-    }
-    footer{
-        margin-bottom: 0;
-    }
-
-    .galery-wrapper{
-        margin-top: 60px;
-    }
-
-    .mapa{
-        margin-top: 90px;
-    }
-   
+  #main-index section article h3 {
+    margin-top: 0;
+  }
+  nav {
+    position: fixed !important;
+    height: 64px;
+    top: 0;
+  }
+  footer {
+    margin-bottom: 0;
+  }
+  .galery-wrapper {
+    margin-top: 60px;
+  }
+  .mapa {
+    margin-top: 90px;
+  }
+}
+/* // X-Large devices (large desktops, 1200px and up) */
+/* // XX-Large devices (larger desktops, 1400px and up) */
+body {
+  font-family: "Playfair Display", serif;
 }
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { }
+p {
+  font-family: "Courgette";
+}
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { }
+/* usado en index y que hacer */
+.section-card {
+  align-items: center;
+  margin: 2vw 0;
+  border: solid thin #d5b54a;
+  border-radius: 10px;
+}
+.section-card img {
+  margin: 2vw 0;
+  width: clamp(300px, 27vw, 400px);
+  aspect-ratio: 4/3;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.section-card article h3 {
+  margin-top: 2vw;
+  text-align: center;
+  color: #d5b54a;
+}
+
+/* ********** gastronomia ************* */
+.text {
+  background: rgba(213, 181, 74, 0.7);
+  position: relative;
+}
+
+.imagen {
+  height: 45vw;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.padding-section {
+  padding: 200px 0;
+}
+
+.titulo-parrafo {
+  position: relative;
+  z-index: 1;
+  margin: 20px 15%;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
+}
+
+.item__paralax {
+  text-shadow: 1px 1px 1px #000, 2px 2px 4px #000;
+  font-family: "Courgette";
+  list-style-type: square;
+}
+
+/* ******** nosotros *************** */
+.img-nosotros img {
+  width: 100%;
+}
+
+#main-nosotros section img {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

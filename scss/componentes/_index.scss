@@ -1,0 +1,72 @@
+
+header.titulo{
+        position: absolute;
+        top:10px;
+        color: $color-primario;
+        text-align: center;
+
+        h1{
+            margin-bottom: 0;
+            margin-top: 7rem;
+            text-shadow: $sombra-texto;
+            font-size:clamp(1.2rem, 4vw, 3.5rem);
+        }
+
+        h4{
+            margin-top: 1vh;
+            text-shadow: $sombra-texto;
+            font-size:clamp(0.7rem, 2.5vw, 2rem);
+        }
+
+} 
+
+.img-principal{
+    @extend %pantallaCompleta;
+    @extend %imgPosition;
+}
+
+.intro{
+    background-color: rgba($color-primario, 0.7);
+    height: 90vh;
+}
+
+.intro-parrafo{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-family: $font-texto;
+    line-height: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+    text-shadow: $sombra-texto;
+}
+
+#main-index .card-index{
+    text-decoration: none;
+    color: $color-texto;
+
+    &:hover .ver-mas{
+        opacity: 1;
+    }
+}
+
+.ver-mas {
+    position: absolute;
+    top:0;
+    @extend %pantallaCompleta;
+    padding: 1rem;
+    background-color: rgba($color-primario, 0.7);
+    color: $color-font;
+    opacity: 0;
+    border-radius: 10px;
+    text-shadow: $sombra-texto;
+
+        & > div {
+            padding: 1rem;
+            @include bordeRedondeado(thin solid $color-font, 10px);
+            @extend %pantallaCompleta;
+          }
+}
+
+.dorada__img__card{
+    padding: 0 4vw;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}

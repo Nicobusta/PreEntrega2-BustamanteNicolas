@@ -1,0 +1,78 @@
+@import './abstract/variables';
+@import './abstract/extend';
+@import './abstract/mixin';
+@import './componentes/header';
+@import './componentes/footer';
+@import './componentes/index';
+@import './componentes/quehacer';
+@import './componentes/contacto';
+@import './abstract/medias';
+
+
+body {
+    font-family: $font-title;
+}
+
+p{
+    font-family: $font-texto;
+}
+
+/* usado en index y que hacer */
+.section-card{
+    align-items: center;
+    margin: 2vw 0;
+    @include bordeRedondeado(solid thin $color-primario, 10px);
+
+    img{
+        margin:2vw 0;
+        width: clamp(300px, 27vw, 400px);
+        aspect-ratio: 4/3; 
+        border-radius: 5px;  
+        object-fit: cover;
+    }
+
+    article h3{
+        margin-top: 2vw;
+        text-align: center;
+        color:$color-primario;
+    }
+}
+
+ /* ********** gastronomia ************* */
+ .text{
+    background: rgba($color-primario, 0.7);
+    position: relative; 
+}
+
+.imagen{
+    height: 45vw;
+    @extend %imgPosition;
+    opacity: 0.8;
+}
+ 
+.padding-section{
+    padding: 200px 0;    
+}
+.titulo-parrafo{
+    position: relative;
+    z-index: 1;
+    margin:20px 15%;
+    text-align: center;
+    text-shadow: $sombra-texto;
+}
+
+.item__paralax{
+    text-shadow: $sombra-texto;
+    font-family: $font-texto;
+    list-style-type: square;
+}
+
+/* ******** nosotros *************** */
+.img-nosotros img{
+    width: 100%;
+}
+
+#main-nosotros section img{
+    aspect-ratio: 3/4;
+    object-fit: cover;
+} 
