@@ -37,6 +37,17 @@
     label{
         color:$color-texto;
     }
+
+    article div:hover{
+        background-color: $color-primario;
+        border-radius: 2px;
+        transition: map-get($efectos , aparecer);
+
+        .icon__contacto, h5, i{
+            color:$color-font;
+            transition: map-get($efectos , aparecer);
+        }
+    }
 } 
 
 form h3{

@@ -246,6 +246,15 @@ header .titulo h3 {
 #main__contacto label {
   color: #000;
 }
+#main__contacto article div:hover {
+  background-color: #d5b54a;
+  border-radius: 2px;
+  transition: all 0.5s ease-in;
+}
+#main__contacto article div:hover .icon__contacto, #main__contacto article div:hover h5, #main__contacto article div:hover i {
+  color: #fff;
+  transition: all 0.5s ease-in;
+}
 
 form h3 {
   color: #d5b54a;
