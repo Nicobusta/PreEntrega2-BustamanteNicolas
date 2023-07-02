@@ -1,0 +1,7 @@
+$efectos:(
+    aparecer:all 0.5s ease-in,
+    galeria:flex 0.5s,
+    y-10:translateY(-10px),
+    oscurecer:darken($color-primario, 20%),
+    degradado:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(213, 180, 74) 6%, rgba(213, 180, 74, 0.863) 94%, rgba(255, 255, 255, 0) 100%),
+);

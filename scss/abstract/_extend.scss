@@ -8,3 +8,18 @@
     background-size: cover;
     background-position: center;
 };
+
+%degradadoParalax{
+    background: map-get($efectos, degradado );
+    position:absolute;
+    width: 100%;
+    top:-8vh;
+    z-index: 1;
+};
+
+%tituloPrincipal{
+    text-align: center;
+    padding: 4vh 8vw;
+    text-shadow: $sombra-texto;
+    font-size:clamp(1.3rem, 3vw, 4rem);
+};

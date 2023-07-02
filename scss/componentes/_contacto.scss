@@ -1,20 +1,25 @@
 .mapa{
     aspect-ratio: 9/16;
-    margin-top: 4vw;
+    margin-top: 2vw;
 }
 
-.icon-contacto{
+.icon__contacto{
     color:$color-primario;
     font-size: clamp(3rem,5vw,4rem);
 }
 
-.redes-contacto{
+.redes__contacto{
     color:$color-primario;
     font-size: clamp(2rem,5vw,3rem);
     margin-inline: 1vw;
 }
 
-#main-contacto{
+#main__contacto{
+    h1{
+        @extend %tituloPrincipal;
+        color: $color-primario;
+    }
+
     h5{
         color:$color-primario;
         font-size: 1.5rem;
@@ -39,7 +44,7 @@ form h3{
     font-weight: 500;
 }
 
-.boton-form{
+.boton__form{
     background-color:$color-primario;
     @include bordeRedondeado(none, 5px);
     width: 100%;

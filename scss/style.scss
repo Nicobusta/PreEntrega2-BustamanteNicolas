@@ -1,4 +1,5 @@
 @import './abstract/variables';
+@import './abstract/maps';
 @import './abstract/extend';
 @import './abstract/mixin';
 @import './componentes/header';
@@ -6,21 +7,17 @@
 @import './componentes/index';
 @import './componentes/quehacer';
 @import './componentes/contacto';
-@import './abstract/medias';
-
 
 body {
     font-family: $font-title;
-}
-
-p{
-    font-family: $font-texto;
+    font-weight: 500;
 }
 
 /* usado en index y que hacer */
-.section-card{
+.section__card{
+    overflow-x: hidden;
     align-items: center;
-    margin: 2vw 0;
+    margin-bottom: 4vh;
     @include bordeRedondeado(solid thin $color-primario, 10px);
 
     img{
@@ -38,21 +35,32 @@ p{
     }
 }
 
- /* ********** gastronomia ************* */
+ /* ********** gastronomia y habitaciones ************* */
+
  .text{
-    background: rgba($color-primario, 0.7);
-    position: relative; 
+    background-color: $color-primario;
+    position:relative; 
+
+    .degradado1{
+        @extend %degradadoParalax;
+        height: 110%;
+    }
+    .degradado2{
+        @extend %degradadoParalax;
+        height: 100%;
+    }   
 }
 
 .imagen{
-    height: 45vw;
+    height: 90vh;
     @extend %imgPosition;
     opacity: 0.8;
 }
  
 .padding-section{
-    padding: 200px 0;    
+    padding: 200px 0;      
 }
+
 .titulo-parrafo{
     position: relative;
     z-index: 1;
@@ -62,17 +70,132 @@ p{
 }
 
 .item__paralax{
+    position: relative;
     text-shadow: $sombra-texto;
-    font-family: $font-texto;
+    font-family: $font-title;
     list-style-type: square;
+    z-index: 2;
 }
 
 /* ******** nosotros *************** */
-.img-nosotros img{
+.img__nosotros img{
     width: 100%;
 }
 
-#main-nosotros section img{
-    aspect-ratio: 3/4;
+.integrantes{
+    
+    &:hover .descripcion{
+        opacity: 1;
+    }
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 0;
+    @extend %pantallaCompleta;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 36%, rgba(213,181,74,0.7) 70%);
+    color: $color-font;
+    opacity: 0;
+    text-shadow: $sombra-texto;
+    transition:map-get($efectos, aparecer);
+
+        & > div {
+            @extend %pantallaCompleta;
+          }
+}
+
+#main__nosotros{
+    h1{
+        @extend %tituloPrincipal;
+        color: $color-font;
+    }
+    section img{
+    width: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
-} 
+    } 
+}
+
+@media (min-width: 768px) {
+
+    .galery__wrapper{
+        flex-direction: row;
+        height: 90vh;
+    }
+
+    .galery__item:hover{
+        flex-basis: 0;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    p{
+        font-family: $font-texto;
+    }
+
+    #main__index section article h3{
+        margin-top:0;
+                    
+    }
+    
+    nav{
+        position: fixed !important;
+        height: 64px;
+        top:0;
+    }
+    footer{
+        margin-bottom: 0;
+        .redes a:hover{
+                background-color: $color-primario;
+                border-radius: 50%;
+                i{
+                    color: $color-font;
+                }
+            }
+           
+        
+    }
+/* pagina que hacer */
+    .galery__wrapper{
+        margin-top: 60px;
+    }
+
+    .mapa{
+        margin-top: 90px;
+    }
+
+    .dorada__nav__link{
+        display: inline-block;
+        position: relative;
+    
+            &::after{
+            content: '';
+            position:absolute; 
+            width: 80%; 
+            height: 3px; 
+            bottom:0; 
+            left: 10%; 
+            background-color:map-get($efectos, oscurecer); 
+            transform: scaleX(0); 
+            transform-origin: bottom center; 
+            transition: transform 0.25s ease-out;
+            }
+    
+            &:hover::after{ 
+                transform: scaleX(1);
+                transform-origin:bottom center;
+            }
+    }
+/* pagina gastronomia y habitaciones */
+    .text .degradado1{
+        height: 118%;
+    }
+    #main__contacto h1{
+        margin-top: 64px;
+    }
+    .item__paralax{
+        font-family: $font-texto;
+    }
+   
+}

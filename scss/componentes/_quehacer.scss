@@ -1,15 +1,15 @@
-.container-galery{
+.container__galery{
     width: 100%;
 }
 
-.galery-wrapper{
+.galery__wrapper{
     display: flex;
     flex-direction: column;
     height: 100vh;
     
  }
 
- .galery-item{
+ .galery__item{
      position: relative;
      isolation: isolate;
      display: flex;
@@ -18,6 +18,7 @@
      margin: 0;
      opacity: 1;
      overflow: hidden;
+     transition: map-get($efectos, galeria), opacity 0.25s;
 
         &:hover{
             opacity: 1;
@@ -26,6 +27,7 @@
 
             .name{
                 opacity: 1;
+                transition: map-get($efectos, aparecer);
              }
         }
 
@@ -34,7 +36,7 @@
         }
  }
 
- .item-image{
+ .item__image{
      position: absolute;
      top: 0;
      right: 0;
@@ -43,7 +45,7 @@
      object-fit: cover;
  }
  
- .item-description{
+ .item__description{
      align-self: flex-end;
      text-transform: uppercase;
      color:$color-font;
@@ -58,4 +60,11 @@
      padding:10px;
      opacity:0;
      border-radius: 0 40px 40px 0;
+     transform: map-get($efectos, y-10);
+ }
+
+ #main__quehacer h1{
+    @extend %tituloPrincipal;
+    color: $color-primario;
+    margin-top: 1rem;
  }

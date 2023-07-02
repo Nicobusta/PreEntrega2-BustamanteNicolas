@@ -1,6 +1,7 @@
 footer{
     background-color: $color-secundario;
-    margin-bottom: 60px;
+    margin-bottom: 61px;
+    border-bottom: solid 1px $color-primario;
     i{
         color: $color-primario;
     }
@@ -15,8 +16,19 @@ footer{
         font-family: $font-texto;
         color: $color-texto;
     }
+
+    .mail__geo a{
+        margin-left: 1vw;
+        &:hover{
+            text-decoration: underline;
+            color: $color-primario;
+        }
+    }
+
+    .redes a{
+        padding: 1vw 1.5vw;
+        margin:.3vw;
+       
+    }
 }
 
-.redes i{
-    padding-right: 2vw;
-}
