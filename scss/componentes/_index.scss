@@ -21,7 +21,7 @@ header{
             font-size:clamp(1.5rem, 4.5vw, 4rem);
         }
 
-        h3{
+        h2{
             margin-top: 1vh;
             text-shadow: $sombra-texto;
             font-size:clamp(0.7rem, 2.5vw, 2rem);
@@ -62,7 +62,7 @@ header{
     padding: 1rem;
     background: linear-gradient(180deg, rgba(255,255,255,0) 36%, rgba(213,181,74,0.7) 70%);
     color: $color-font;
-    opacity: 0;
+    opacity: 1;
     border-radius: 10px;
     text-shadow: $sombra-texto;
     transition:map-get($efectos, aparecer);

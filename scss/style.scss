@@ -52,6 +52,7 @@ body {
 }
 
 .imagen{
+    width: 100vw;
     height: 90vh;
     @extend %imgPosition;
     opacity: 0.8;
@@ -82,12 +83,6 @@ body {
     width: 100%;
 }
 
-.integrantes{
-    
-    &:hover .descripcion{
-        opacity: 1;
-    }
-}
 
 .descripcion {
     position: absolute;
@@ -95,7 +90,7 @@ body {
     @extend %pantallaCompleta;
     background: linear-gradient(180deg, rgba(255,255,255,0) 36%, rgba(213,181,74,0.7) 70%);
     color: $color-font;
-    opacity: 0;
+    opacity: 1;
     text-shadow: $sombra-texto;
     transition:map-get($efectos, aparecer);
 
@@ -132,6 +127,23 @@ body {
 @media (min-width: 992px) {
     p{
         font-family: $font-texto;
+    }
+
+    #main__index .card__index{
+        text-decoration: none;
+        color: $color-texto;
+    
+        &:hover .ver__mas{
+            opacity: 1;
+        }
+    }
+
+    .integrantes:hover .descripcion{
+        opacity: 1;
+    }
+
+    .integrantes .descripcion, #main__index .card__index .ver__mas{
+        opacity: 0;
     }
 
     #main__index section article h3{

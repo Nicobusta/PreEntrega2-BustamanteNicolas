@@ -95,7 +95,7 @@ header .titulo h1 {
   text-shadow: 1px 1px 1px #000, 1px 1px 3px #000;
   font-size: clamp(1.5rem, 4.5vw, 4rem);
 }
-header .titulo h3 {
+header .titulo h2 {
   margin-top: 1vh;
   text-shadow: 1px 1px 1px #000, 1px 1px 3px #000;
   font-size: clamp(0.7rem, 2.5vw, 2rem);
@@ -130,7 +130,7 @@ header .titulo h3 {
   padding: 1rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(213, 181, 74, 0.7) 70%);
   color: #fff;
-  opacity: 0;
+  opacity: 1;
   border-radius: 10px;
   text-shadow: 1px 1px 1px #000, 1px 1px 3px #000;
   transition: all 0.5s ease-in;
@@ -243,6 +243,10 @@ header .titulo h3 {
 #main__contacto input, #main__contacto textarea {
   border-color: #d5b54a;
 }
+#main__contacto textarea {
+  height: 150px;
+  resize: none;
+}
 #main__contacto label {
   color: #000;
 }
@@ -307,6 +311,7 @@ body {
 }
 
 .imagen {
+  width: 100vw;
   height: 90vh;
   opacity: 0.8;
 }
@@ -336,16 +341,12 @@ body {
   width: 100%;
 }
 
-.integrantes:hover .descripcion {
-  opacity: 1;
-}
-
 .descripcion {
   position: absolute;
   bottom: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, rgba(213, 181, 74, 0.7) 70%);
   color: #fff;
-  opacity: 0;
+  opacity: 1;
   text-shadow: 1px 1px 1px #000, 1px 1px 3px #000;
   transition: all 0.5s ease-in;
 }
@@ -371,6 +372,19 @@ body {
 @media (min-width: 992px) {
   p {
     font-family: "Courgette";
+  }
+  #main__index .card__index {
+    text-decoration: none;
+    color: #000;
+  }
+  #main__index .card__index:hover .ver__mas {
+    opacity: 1;
+  }
+  .integrantes:hover .descripcion {
+    opacity: 1;
+  }
+  .integrantes .descripcion, #main__index .card__index .ver__mas {
+    opacity: 0;
   }
   #main__index section article h3 {
     margin-top: 0;

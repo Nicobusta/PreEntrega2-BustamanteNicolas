@@ -99,23 +99,23 @@
         </div>
       </section>
       <!-- formulario comentarios -->
-      <form class="container shadow mb-5 mt-3">
+      <form class="container shadow mb-5 mt-3" action="" method="post" enctype="text/plain">
           <h3 class="text-center py-4">DEJANOS TU COMENTARIO</h3>
-          <section class="form-floating mb-3">
-            <input type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre">
+          <fieldset class="form-floating mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre" required>
             <label for="nombre" class="form-label">Ingresa tu nombre</label>
-          </section>
-          <section class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          </fieldset>
+          <fieldset class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
             <label for="email" class="form-label">Ingresa tu correo</label>
-          </section>
-          <section class="form-floating mb-3">
-            <textarea class="form-control" id="comentario" rows="9" placeholder="Insertar comentario"></textarea>
+          </fieldset>
+          <fieldset class="form-floating mb-3">
+            <textarea class="form-control" id="comentario" cols="10" rows="9" placeholder="Insertar comentario" required ></textarea>
             <label for="comentario" class="form-label">Deja tu comentario</label>
-          </section>
-          <section class="col-6 mx-auto">
+          </fieldset>
+          <fieldset class="col-6 mx-auto">
             <button type="submit" class="boton__form text-white mb-3 py-2">Submit</button>
-          </section>
+          </fieldset>
       </form>
         
     </main>
